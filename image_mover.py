@@ -7,7 +7,7 @@ from loguru import logger
 def copy_file(current_location : Path, new_location : Path, check_exists : bool = True) -> None :
     ''' If the new_location does not exist, copy file from current_location to there '''
     
-    if new_location.is_file():
+    if check_exists and new_location.is_file():
         logger.warning(f'{new_location} exists. Skipping.')
         return
     
