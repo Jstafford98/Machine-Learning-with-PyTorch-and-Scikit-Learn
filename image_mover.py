@@ -25,7 +25,7 @@ def parse_filename(filename : str) -> tuple[int, int, int | None] | None :
     
     if total_parts not in range(2, 4):
         logger.warning(f'Skipping {file}')
-        return
+        return None
     
     parts = map(int, parts)
     return tuple(parts) if total_parts == 3 else (*parts, None)
