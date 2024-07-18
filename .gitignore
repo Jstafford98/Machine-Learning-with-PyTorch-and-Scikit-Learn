@@ -4,3 +4,4 @@ __pycache__/
 data/
 machine-learning-book-main/
 custom_implementations/
+src/MNIST
